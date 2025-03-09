@@ -167,3 +167,4 @@ D:\CRUD_Student_Information_System\StudentInfoSystem\bin\Debug\net9.0\Swashbuckl
 D:\CRUD_Student_Information_System\StudentInfoSystem\bin\Debug\net9.0\xunit.assert.dll
 D:\CRUD_Student_Information_System\StudentInfoSystem\bin\Debug\net9.0\xunit.core.dll
 D:\CRUD_Student_Information_System\StudentInfoSystem\bin\Debug\net9.0\xunit.execution.dotnet.dll
+d:\CRUD_Student_Information_System\StudentInfoSystem\obj\Debug\net9.0\StudentInfoSystem.sourcelink.json

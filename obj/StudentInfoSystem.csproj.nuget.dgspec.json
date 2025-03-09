@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CRUD_Student_Information_System\\studentinfosystem\\StudentInfoSystem.csproj": {}
+    "D:\\CRUD_Student_Information_System\\StudentInfoSystem\\StudentInfoSystem.csproj": {}
   },
   "projects": {
-    "D:\\CRUD_Student_Information_System\\studentinfosystem\\StudentInfoSystem.csproj": {
+    "D:\\CRUD_Student_Information_System\\StudentInfoSystem\\StudentInfoSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CRUD_Student_Information_System\\studentinfosystem\\StudentInfoSystem.csproj",
+        "projectUniqueName": "D:\\CRUD_Student_Information_System\\StudentInfoSystem\\StudentInfoSystem.csproj",
         "projectName": "StudentInfoSystem",
-        "projectPath": "D:\\CRUD_Student_Information_System\\studentinfosystem\\StudentInfoSystem.csproj",
+        "projectPath": "D:\\CRUD_Student_Information_System\\StudentInfoSystem\\StudentInfoSystem.csproj",
         "packagesPath": "C:\\Users\\mingh\\.nuget\\packages\\",
-        "outputPath": "D:\\CRUD_Student_Information_System\\studentinfosystem\\obj\\",
+        "outputPath": "D:\\CRUD_Student_Information_System\\StudentInfoSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
