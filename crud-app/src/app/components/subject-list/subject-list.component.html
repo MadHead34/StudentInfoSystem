@@ -1,0 +1,22 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100 p-6">
+    <div class="w-full max-w-3xl bg-white p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-bold text-center mb-4">Subjects List</h2>
+      
+      <table class="w-full border-collapse border border-gray-300">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="border border-gray-300 px-4 py-2">ID</th>
+            <th class="border border-gray-300 px-4 py-2">Name</th>
+            <th class="border border-gray-300 px-4 py-2">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let subject of subjects" class="hover:bg-gray-100">
+            <td class="border border-gray-300 px-4 py-2 text-center">{{ subject.id }}</td>
+            <td class="border border-gray-300 px-4 py-2">{{ subject.name }}</td>
+            <td class="border border-gray-300 px-4 py-2">{{ subject.description }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
