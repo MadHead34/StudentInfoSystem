@@ -1,0 +1,6 @@
+d:\CRUD_Student_Information_System\StudentInfoSystem\StudentInfoSystem.Tests\obj\Debug\net9.0\StudentInfoSystem.Tests.csproj.AssemblyReference.cache
+d:\CRUD_Student_Information_System\StudentInfoSystem\StudentInfoSystem.Tests\obj\Debug\net9.0\StudentInfoSystem.Tests.GeneratedMSBuildEditorConfig.editorconfig
+d:\CRUD_Student_Information_System\StudentInfoSystem\StudentInfoSystem.Tests\obj\Debug\net9.0\StudentInfoSystem.Tests.AssemblyInfoInputs.cache
+d:\CRUD_Student_Information_System\StudentInfoSystem\StudentInfoSystem.Tests\obj\Debug\net9.0\StudentInfoSystem.Tests.AssemblyInfo.cs
+d:\CRUD_Student_Information_System\StudentInfoSystem\StudentInfoSystem.Tests\obj\Debug\net9.0\StudentInfoSystem.Tests.csproj.CoreCompileInputs.cache
+d:\CRUD_Student_Information_System\StudentInfoSystem\StudentInfoSystem.Tests\obj\Debug\net9.0\StudentInfoSystem.Tests.sourcelink.json

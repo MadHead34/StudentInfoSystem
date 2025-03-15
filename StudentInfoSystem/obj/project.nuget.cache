@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VnzyJfC6TG0=",
+  "dgSpecHash": "9p2F5xai3/U=",
   "success": true,
-  "projectFilePath": "D:\\CRUD_Student_Information_System\\studentinfosystem\\StudentInfoSystem.csproj",
+  "projectFilePath": "D:\\CRUD_Student_Information_System\\StudentInfoSystem\\StudentInfoSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mingh\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\mingh\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -127,5 +127,16 @@
     "C:\\Users\\mingh\\.nuget\\packages\\xunit.extensibility.execution\\2.9.3\\xunit.extensibility.execution.2.9.3.nupkg.sha512",
     "C:\\Users\\mingh\\.nuget\\packages\\xunit.runner.visualstudio\\3.0.2\\xunit.runner.visualstudio.3.0.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNetCore.Identity' 2.3.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-2865-hh9g-w894",
+      "libraryId": "Microsoft.AspNetCore.Identity",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

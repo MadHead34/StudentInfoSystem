@@ -1,8 +1,71 @@
-<div class="p-4 bg-gray-100">
-  <h2 class="text-xl font-bold mb-4">Student List</h2>
-  <ul>
-    <li *ngFor="let student of students" class="p-2 border-b">
-      {{ student.name }} ({{ student.age }})
-    </li>
-  </ul>
+<div class="container mx-auto p-6">
+
+  <nav class="bg-gray-800 p-4 mb-4 rounded">
+    <ul class="flex space-x-6 text-white">
+      <li><a routerLink="/" class="hover:underline">Home</a></li>
+      <li><a routerLink="/students" class="hover:underline">Students</a></li>
+      <li><a routerLink="/courses" class="hover:underline">Courses</a></li>
+      <li><a routerLink="/subjects" class="hover:underline">Subjects</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div class="bg-blue-500 p-4 text-white rounded shadow-lg">
+      <h2 class="text-lg font-bold">Total Students</h2>
+      <p class="text-2xl font-semibold">{{ totalStudents }}</p>
+    </div>
+  </div>
+
+
+  <div class="mb-4">
+    <label for="filter" class="block text-gray-700 font-bold mb-2">Filter Students:</label>
+    <select
+      id="filter"
+      class="border p-2 rounded"
+      [(ngModel)]="selectedFilter"
+      (change)="filterStudents(selectedFilter)"
+    >
+      <option value="all">All Students</option>
+      <option value="no-subjects">Students with No Subjects</option>
+    </select>
+  </div>
+
+
+<div class="relative overflow-x-auto">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="px-6 py-3">
+                  ID
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Name
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Course Name
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  HasSubject
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200" *ngFor=" let student of filteredStudents">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  {{student.id}}
+              </th>
+              <td class="px-6 py-4">
+                  {{student.name}}
+              </td>
+              <td class="px-6 py-4">
+                  {{student.courseName || 'No Course'}}
+              </td>
+              <td class="px-6 py-4">
+                <span *ngIf="student.subjectNames.length > 0">{{ student.subjectNames }}</span>
+                <span *ngIf="student.subjectNames.length === 0">No Subjects</span>
+              </td>
+          </tr>
+      </tbody>
+  </table>
 </div>
