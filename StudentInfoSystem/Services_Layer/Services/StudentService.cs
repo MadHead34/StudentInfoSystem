@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 public class StudentService
 {
     private readonly StudentRepository _studentRepository;
-    public StudentService(StudentDbContext context, StudentRepository studentRepository)
+    public StudentService(StudentRepository studentRepository)
     {
         _studentRepository = studentRepository;
     }

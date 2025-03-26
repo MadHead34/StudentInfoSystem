@@ -8,6 +8,7 @@ public class StudentDbContext : DbContext
     public DbSet<Course> Courses { get; set; }
     public DbSet<Subject> Subjects { get; set; }
 
+    public DbSet<Users> Users { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
 

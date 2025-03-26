@@ -7,7 +7,7 @@ import { Student } from '../models/student.model';
   providedIn: 'root'
 })
 export class StudentService {
-  private apiUrl = 'https://localhost:4200/students'; // Replace with actual API URL
+  private apiUrl = 'http://localhost:5163/api/students'; 
 
   constructor(private http: HttpClient) {}
 
@@ -15,7 +15,11 @@ export class StudentService {
     return this.http.get<Student[]>(this.apiUrl);
   }
 
-  getStudentById(id: number): Observable<Student> {
-    return this.http.get<Student>(`${this.apiUrl}/${id}`);
+  getStudentsWithoutCourses(): Observable<Student[]> {
+    return this.http.get<Student[]>(`${this.apiUrl}/no-course`);
+  }
+
+  getStudentsWithoutCoursesCount(): Observable<number> {
+    return this.http.get<number>(`${this.apiUrl}/count-no-course`);
   }
 }

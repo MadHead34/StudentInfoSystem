@@ -6,13 +6,11 @@ public class StudentServiceTests
 {
     private readonly StudentService _studentService;
     private readonly Mock<StudentRepository> _mockRepo;
-    private readonly Mock<StudentDbContext> _mockDbContext;
 
     public StudentServiceTests()
     {
         _mockRepo = new Mock<StudentRepository>();
-        _mockDbContext = new Mock<StudentDbContext>(); 
-        _studentService = new StudentService(_mockDbContext.Object, _mockRepo.Object);
+        _studentService = new StudentService(_mockRepo.Object);
     }
 
     [Fact]
