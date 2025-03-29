@@ -84,8 +84,8 @@
           {{ student.courseName || 'No Course' }}
         </td>
         <td class="px-6 py-4">
-          <span *ngIf="student.subjectNames.length > 0">{{ student.subjectNames.join(', ') }}</span>
-          <span *ngIf="student.subjectNames.length === 0">No Subjects</span>
+          <span *ngIf="student.subjectNames && student.subjectNames.length > 0">{{ student.subjectNames}}</span>
+          <span *ngIf="!student.subjectNames || student.subjectNames.length === 0">No Subjects</span>
         </td>
       </tr>
     </tbody>

@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { initFlowbite } from 'flowbite';
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course.service';
+import { CardComponent } from '../card/card.component';
+import { TableComponent } from "../table/table.component";
 
 @Component({
   selector: 'app-student-list',
   standalone: true,
-  imports: [CommonModule, FormsModule], 
+  imports: [CommonModule, FormsModule, CardComponent, TableComponent], 
   templateUrl: './course-list.component.html',
 })
 export class CourseListComponent implements OnInit, AfterViewInit {

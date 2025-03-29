@@ -32,14 +32,17 @@
 
   <!-- Stats Section -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-    <div class="bg-blue-500 p-4 text-white rounded shadow-lg">
-      <h2 class="text-lg font-bold">Total Courses</h2>
-      <p class="text-2xl font-semibold">{{ totalCourses }}</p>
-    </div>
-    <div class="bg-red-500 p-4 text-white rounded shadow-lg">
-      <h2 class="text-lg font-bold">Courses Without Subjects</h2>
-      <p class="text-2xl font-semibold">{{ coursesWithoutSubjectsCount }}</p>
-    </div>
+    <app-card 
+        [title]="'Total Courses'" 
+        [value]="totalCourses" 
+        [color]="'bg-blue-500'">
+    </app-card>
+
+    <app-card 
+        [title]="'Students Without Courses'" 
+        [value]="coursesWithoutSubjectsCount" 
+        [color]="'bg-red-500'">
+    </app-card>
   </div>
 
   <!-- Filter Dropdown -->
@@ -52,11 +55,11 @@
       (change)="filterCourses(selectedFilter)"
     >
       <option value="all">All Courses</option>
-      <option value="no-course">Course with No Subjects</option>
+      <option value="no-subjects">Course with No Subjects</option>
     </select>
   </div>
 
-<div class="relative overflow-x-auto">
+<!-- <div class="relative overflow-x-auto">
   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
       <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
@@ -65,6 +68,9 @@
               </th>
               <th scope="col" class="px-6 py-3">
                 Name
+              </th>
+              <th scope="col" class="px-6 py-3">
+                StudentCount
               </th>
               <th scope="col" class="px-6 py-3">
                 Subjects
@@ -77,10 +83,10 @@
                   {{course.id}}
               </th>
               <td class="px-6 py-4">
-                  {{course.Coursename}}
+                  {{course.courseName}}
               </td>
               <td class="px-6 py-4">
-                  {{course.subjects}}
+                  {{course.studentCount}}
               </td>
               <td class="px-6 py-4">
                 <span *ngIf="course.subjects.length > 0">{{ course.subjects.join(', ') }}</span>
@@ -89,4 +95,37 @@
           </tr>
       </tbody>
   </table>
+</div> -->
+
+<div class="relative overflow-x-auto">
+  <app-table>
+    <!-- Thead goes here with an attribute 'tableHead' -->
+    <thead tableHead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <tr>
+        <th scope="col" class="px-6 py-3">ID</th>
+        <th scope="col" class="px-6 py-3">Name</th>
+        <th scope="col" class="px-6 py-3">StudentCount</th>
+        <th scope="col" class="px-6 py-3">Subjects</th>
+      </tr>
+    </thead>
+  
+    <!-- Tbody goes here with an attribute 'tableBody' -->
+    <tbody tableBody>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200" *ngFor="let course of filteredCourses">
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+          {{ course.id }}
+        </th>
+        <td class="px-6 py-4">
+          {{ course.courseName }}
+        </td>
+        <td class="px-6 py-4">
+          {{ course.studentCount}}
+        </td>
+        <td class="px-6 py-4">
+          <span *ngIf="course.subjects.length > 0">{{ course.subjects.join(', ') }}</span>
+          <span *ngIf="course.subjects.length === 0">No Subjects</span>
+        </td>
+      </tr>
+    </tbody>
+  </app-table> 
 </div>

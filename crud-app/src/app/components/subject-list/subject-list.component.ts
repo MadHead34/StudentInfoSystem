@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { SubjectService } from '../../services/subject.service';
 import { Subject } from '../../models/subject.model';
 import { initFlowbite } from 'flowbite';
+import { CardComponent } from '../card/card.component';
+import { TableComponent } from "../table/table.component";
 
 @Component({
   selector: 'app-subject-list',
   standalone: true,
-  imports: [CommonModule, FormsModule], 
+  imports: [CommonModule, FormsModule, CardComponent, TableComponent], 
   templateUrl: './subject-list.component.html',
 })
 export class SubjectListComponent implements OnInit, AfterViewInit {

@@ -1,5 +1,6 @@
 export interface Course {
     id: number;
-    Coursename: string;
+    courseName: string;
     subjects: string[];
+    studentCount: number;
   }
